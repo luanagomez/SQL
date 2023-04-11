@@ -1,0 +1,40 @@
+/** furniture_inventory:
+tables (5)
+table chairs (20)
+couches (5)
+loveseats (5)
+lamps (10)
+beds (10)
+mattresses (10)
+dressers (8)
+living room chairs (5)
+end tables (5)
+coffee tables (3)
+mirrors (5)
+decor (20)
+rugs (10)
+coffeebars (5)
+**/
+CREATE TABLE furniture_inventory (id INTEGER PRIMARY KEY, furniture TEXT, quantity INTEGER, sale TEXT, price INTEGER);
+
+INSERT INTO furniture_inventory VALUES (1, "tables", 5, "no", 1200);
+INSERT INTO furniture_inventory VALUES (2, "table chairs", 20, "no", 120);
+INSERT INTO furniture_inventory VALUES (3, "couches", 5, "yes", 400);
+INSERT INTO furniture_inventory VALUES (4, "loveseats", 5, "yes", 250);
+INSERT INTO furniture_inventory VALUES (5, "lamps", 10, "no", 125);
+INSERT INTO furniture_inventory VALUES (6, "beds", 10, "yes", 225);
+INSERT INTO furniture_inventory VALUES (7, "mattresses", 10, "no", 885);
+INSERT INTO furniture_inventory VALUES (8, "dressers", 8, "no", 220);
+INSERT INTO furniture_inventory VALUES (9, "living room chairs", 5, "yes", 220);
+INSERT INTO furniture_inventory VALUES (10, "end tables", 5, "no", 115);
+INSERT INTO furniture_inventory VALUES (11, "coffee tables", 3, "yes", 90);
+INSERT INTO furniture_inventory VALUES (12, "mirrors", 5, "no", 120);
+INSERT INTO furniture_inventory VALUES (13, "decor", 20, "no", 150);
+INSERT INTO furniture_inventory VALUES (14, "rugs", 10, "no", 200);
+INSERT INTO furniture_inventory VALUES (15, "coffee bars", 5, "no", 150);
+
+--display database ordered by price
+SELECT * FROM furniture_inventory ORDER BY price;
+
+--display database ordered by price where items are more than 150
+SELECT * FROM furniture_inventory WHERE price > 150 ORDER BY price;
